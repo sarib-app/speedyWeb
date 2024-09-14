@@ -1,0 +1,91 @@
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1050;
+}
+
+.modalContent {
+  position: relative;
+  max-width: 800px; /* Adjusted width to avoid extra space */
+  width: 100%; /* Ensures full width */
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  overflow: auto; /* Allows scrolling */
+  max-height: 70vh; /* Limits the height */
+}
+
+.closeIcon {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  cursor: pointer;
+  font-size: 24px;
+  color: #6c757d;
+}
+
+.closeIcon:hover {
+  color: #343a40;
+}
+
+.section {
+  margin-bottom: 20px;
+}
+
+.sectionTitle {
+  font-size: 20px;
+  color: #333;
+  margin-bottom: 10px;
+  font-weight: 600;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer; /* Makes the title clickable */
+}
+
+.sectionGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* Ensures two fields per row */
+  gap: 20px;
+}
+
+.sectionItem {
+  font-size: 16px;
+  line-height: 1.5;
+  color: #666;
+  margin-bottom: 5px;
+}
+
+.sectionStrong {
+  font-weight: bold;
+}
+
+.closeButton {
+  display: block;
+  padding: 8px 20px;
+  margin-top: 20px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  width: 100%; /* Full width */
+}
+
+.closeButton:hover {
+  background-color: #0056b3;
+}
+
+.expandIcon {
+  margin-left: 10px;
+}

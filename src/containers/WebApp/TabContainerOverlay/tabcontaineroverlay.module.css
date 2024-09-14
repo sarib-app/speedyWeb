@@ -1,0 +1,69 @@
+/* TabContainerOverlay.css */
+
+/* Container for the tabs */
+.tab-container {
+  display: flex;
+  justify-content: center;
+  padding: 10px;
+}
+
+/* Individual tab button style */
+.tab-button {
+  background-color: #084887;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  padding: 10px 20px;
+  margin: 0 10px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.tab-button:hover {
+  background-color: #f9ab55;
+}
+
+/* Active tab button style */
+.active-tab-button {
+  background-color: #f9ab55;
+}
+
+/* Tab content style */
+.tab-content {
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+/* businessdetailoverlay.module.css */
+
+.modal-content {
+  background-color: #fff;
+  padding: 10px;
+  border-radius: 5px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+  max-width: 800px; /* Increase the maximum width for a broader modal */
+  width: 100%;
+  font-family: "DM Sans", sans-serif; /* Use the specified font family */
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.close-icon {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
+  font-size: 1.5rem;
+  color: #084887;
+}

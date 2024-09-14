@@ -1,0 +1,12 @@
+node_modules
+Dockerfile
+Dockerfile.dev
+out
+.next
+.firebaserc
+firebase.json
+README.md
+yarn-error.log
+yark.lock
+.gitignore
+.expo

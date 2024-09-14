@@ -1,0 +1,42 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: _NAME
+  labels:
+    app: _NAME
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: _NAME
+  template:
+    metadata:
+      labels:
+        app: _NAME
+    spec:
+      containers:
+      - name: _NAME
+        image: 788613259169.dkr.ecr._REGION.amazonaws.com/_IMAGE_REPO:_IMAGE_TAG
+        ports:
+        - containerPort: 3000
+        resources:
+          requests:
+            memory: "100Mi"   
+            cpu: "100m"       
+          limits:
+            memory: "1000Mi"   
+            cpu: "1000m"      
+
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: _NAME
+spec:
+  selector:
+    app: _NAME
+  ports:
+     - port: 3000
+       targetPort: 3000
+       protocol: TCP
+  type: ClusterIP
